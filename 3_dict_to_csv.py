@@ -14,7 +14,7 @@ import csv
 
 def main():
     dump = [
-        {'name': 'Jose  Marquez Alcantara', 'age': 57, 'job': 'Mexican actor'},
+        {'name': 'Jose Marquez Alcantara', 'age': 57, 'job': 'Mexican actor'},
         {'name': 'Elizabeth II', 'age': 95, 'job': 'Brittish pensioner'},
         {'name': 'Pikachu', 'age': 28, 'job': 'Yellow pokemon'},
         {'name': 'Gal Gadot', 'age': 36, 'job': 'Superwoman actress'},
@@ -29,8 +29,7 @@ def main():
         fields = ['name', 'age', 'job']
         writer = csv.DictWriter(f, fields, delimiter=';')
         writer.writeheader()
-        for person in dump:
-            writer.writerow(person)
+        writer.writerows(dump)
 
 
 if __name__ == "__main__":

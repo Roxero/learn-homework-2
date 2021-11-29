@@ -11,11 +11,12 @@ from datetime import date, datetime, timedelta
 
 
 def print_days():
-    onedaydelta = timedelta(days=1)
+    one_day_delta = timedelta(days=1)
+    thirty_days_delta = timedelta(days=30)
 
     today = datetime.now()
-    yesterday = today - onedaydelta
-    in30days = today + 30 * onedaydelta
+    yesterday = today - one_day_delta
+    in30days = today + thirty_days_delta
 
     print('Yesterday was: ', datetime.strftime(yesterday, '%d.%m.%Y'))
     print('Today is: ', datetime.strftime(today, '%d.%m.%Y'))
